@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyBanHang_2020", "QuanLyBanHang_2020\QuanLyBanHang_2020.csproj", "{EC0EFA71-8CF3-43C4-B335-83E3B5AB2013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC0EFA71-8CF3-43C4-B335-83E3B5AB2013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0EFA71-8CF3-43C4-B335-83E3B5AB2013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0EFA71-8CF3-43C4-B335-83E3B5AB2013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0EFA71-8CF3-43C4-B335-83E3B5AB2013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
