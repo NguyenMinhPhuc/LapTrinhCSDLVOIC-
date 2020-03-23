@@ -30,5 +30,15 @@ namespace QuanLyBanHang_2020
                             new SqlParameter("@MatKhau", _nhanVien.MatKhau));
 
         }
+        public bool XoaNhanVienVinhVien(ref string err,ref int count,NhanVien _nhanVien)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_Delete", CommandType.StoredProcedure,
+                new SqlParameter("@MaNV", _nhanVien.MaNV));
+        }
+        public bool XoaNhanVienUpdateIsDelete(ref string err, ref int count, NhanVien _nhanVien)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_DeleteUpdateIsDelete", CommandType.StoredProcedure,
+                new SqlParameter("@MaNV", _nhanVien.MaNV));
+        }
     }
 }

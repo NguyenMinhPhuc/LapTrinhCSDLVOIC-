@@ -21,5 +21,31 @@ namespace QuanLyBanHang_2020
                 new SqlParameter("@TenDangNhap", tenDangNhap),
                 new SqlParameter("@MatKhau", matKhau));
         }
+        public bool ThucThiSaoLuuDulieu(ref string err,ref int count,string path)
+        {
+           return data.MyExcuteNonQuery(ref err, ref count, "PSP_SaoLuuDuLieu", CommandType.StoredProcedure,
+                new SqlParameter("@duongdan", path));
+        }
+        public bool ThucThiPhucHoiDulieu(ref string err, ref int count,string sql)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, sql, CommandType.Text,
+                 null);
+        }
+
+        public bool DoiMatKhau(ref string err,ref int count,string maNhanVien,string MatKhau)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_DoiMatKhau", CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                new SqlParameter("@MatKhau", MatKhau));
+        }
+        public bool ResetMatKhau(ref string err, ref int count, string maNhanVien)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_ResetMatKhau", CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien));
+        }
+        public DataTable LayNhanVienVaoCbo(ref string err)
+        {
+            return data.GetDataTable(ref err, "PSP_NhanVien_LayDuLieuCombo", CommandType.StoredProcedure, null);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang_2020.HeThong;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +38,26 @@ namespace QuanLyBanHang_2020
         {
             Frm_NhanVien_Main frmNhanVien = new Frm_NhanVien_Main();
             frmNhanVien.ShowDialog();
+        }
+
+        private void mnuSaoLuu_Click(object sender, EventArgs e)
+        {
+            Frm_SaoLuu_PhucHoi frmsaoLuu = new Frm_SaoLuu_PhucHoi();
+            frmsaoLuu.saoLuu = true;
+            frmsaoLuu.ShowDialog();
+        }
+
+        private void mnuPhucHoi_Click(object sender, EventArgs e)
+        {
+            Frm_SaoLuu_PhucHoi frmsaoLuu = new Frm_SaoLuu_PhucHoi();
+            frmsaoLuu.saoLuu = false;
+            frmsaoLuu.ShowDialog();
+        }
+
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            Frm_DoiMatKhai frmDoiMatKhau = new Frm_DoiMatKhai();
+            frmDoiMatKhau.ShowDialog();
         }
     }
 }

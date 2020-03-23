@@ -18,6 +18,7 @@ namespace QuanLyBanHang_2020
         }
         BLL_HeThong bd;
         string err = string.Empty;
+        int count = 0;
         DataTable dt;
         NhanVien _NhanVien;
         private void Frm_NhanVien_Main_Load(object sender, EventArgs e)
@@ -59,10 +60,49 @@ namespace QuanLyBanHang_2020
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Frm_NhanVien_Modified _FrmNhanVienModified = new Frm_NhanVien_Modified();
-            _FrmNhanVienModified.Them = false;
-            _FrmNhanVienModified._NhanVien = _NhanVien;
-            _FrmNhanVienModified.ShowDialog();
+            if (_NhanVien != null)
+            {
+                Frm_NhanVien_Modified _FrmNhanVienModified = new Frm_NhanVien_Modified();
+                _FrmNhanVienModified.Them = false;
+                _FrmNhanVienModified._NhanVien = _NhanVien;
+                _FrmNhanVienModified.ShowDialog();
+                HienThiDanhSachNhanVien();
+            }
+            else
+            {
+                MessageBox.Show("chua chọn nv can xoa");
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (_NhanVien !=null)
+            {
+                if (bd.XoaNhanVienUpdateIsDelete(ref err, ref count, _NhanVien))
+                {
+                    if(count>0)
+                    {
+                        MessageBox.Show("Xóa thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        HienThiDanhSachNhanVien();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công\n"+err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }else
+            {
+                MessageBox.Show("chua chọn nv can xoa");
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnNapLai_Click(object sender, EventArgs e)
+        {
             HienThiDanhSachNhanVien();
         }
     }

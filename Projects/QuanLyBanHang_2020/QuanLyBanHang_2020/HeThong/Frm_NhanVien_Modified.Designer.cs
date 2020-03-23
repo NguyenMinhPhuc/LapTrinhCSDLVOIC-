@@ -203,9 +203,10 @@
             this.Controls.Add(this.txtMaNhanVien);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Frm_NhanVien_Modified";
-            this.Text = "Frm_NhanVien_Modified";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cập nhật thông tin nhân viên";
             this.Load += new System.EventHandler(this.Frm_NhanVien_Modified_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

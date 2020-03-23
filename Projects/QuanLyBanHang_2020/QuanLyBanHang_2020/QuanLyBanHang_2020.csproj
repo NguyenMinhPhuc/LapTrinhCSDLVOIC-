@@ -60,6 +60,12 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong\BLL_NhanVien.cs" />
+    <Compile Include="HeThong\Frm_DoiMatKhai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\Frm_DoiMatKhai.Designer.cs">
+      <DependentUpon>Frm_DoiMatKhai.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\Frm_NhanVien_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     </Compile>
     <Compile Include="HeThong\Frm_NhanVien_Modified.Designer.cs">
       <DependentUpon>Frm_NhanVien_Modified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\Frm_SaoLuu_PhucHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\Frm_SaoLuu_PhucHoi.Designer.cs">
+      <DependentUpon>Frm_SaoLuu_PhucHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong\NhanVien.cs" />
     <Compile Include="LogIn.cs">
@@ -84,11 +96,17 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\Frm_DoiMatKhai.resx">
+      <DependentUpon>Frm_DoiMatKhai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\Frm_NhanVien_Main.resx">
       <DependentUpon>Frm_NhanVien_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\Frm_NhanVien_Modified.resx">
       <DependentUpon>Frm_NhanVien_Modified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\Frm_SaoLuu_PhucHoi.resx">
+      <DependentUpon>Frm_SaoLuu_PhucHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

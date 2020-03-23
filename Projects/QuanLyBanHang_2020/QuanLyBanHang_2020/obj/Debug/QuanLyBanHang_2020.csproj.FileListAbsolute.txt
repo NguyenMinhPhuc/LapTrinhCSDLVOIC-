@@ -10,3 +10,17 @@ D:\Learning\ProjectToGitHub\WFA2\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug
 D:\Learning\ProjectToGitHub\WFA2\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.pdb
 D:\Learning\ProjectToGitHub\WFA2\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.Frm_NhanVien_Main.resources
 D:\Learning\ProjectToGitHub\WFA2\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.Frm_NhanVien_Modified.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\bin\Debug\QuanLyBanHang_2020.exe.config
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.exe
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.pdb
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\bin\Debug\QuanLyBanHang_2020.exe
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\bin\Debug\QuanLyBanHang_2020.pdb
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.csprojResolveAssemblyReference.cache
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.FrmMain.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.Frm_NhanVien_Main.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.Frm_NhanVien_Modified.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.LogIn.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.Properties.Resources.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.csproj.GenerateResource.Cache
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.HeThong.Frm_SaoLuu_PhucHoi.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.HeThong.Frm_DoiMatKhai.resources

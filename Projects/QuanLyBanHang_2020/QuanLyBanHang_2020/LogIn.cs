@@ -42,6 +42,7 @@ namespace QuanLyBanHang_2020
                 {
                     ClsMain.TenNhanVien = dt.Rows[0]["TenNhanVien"].ToString();
                     ClsMain.MaTaiKhoan = Convert.ToInt32(dt.Rows[0]["MaTaiKhoan"].ToString());
+                    ClsMain.MaNhanVien = dt.Rows[0]["MaNV"].ToString();
                     result = true;
                 }
             }

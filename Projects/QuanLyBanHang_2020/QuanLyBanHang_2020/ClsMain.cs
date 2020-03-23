@@ -9,6 +9,9 @@ namespace QuanLyBanHang_2020
     public class ClsMain
     {
         public static string TenNhanVien;
+        public static string MaNhanVien;
         public static int MaTaiKhoan;
+
+        public static string DatabaseName = "BanHang2020";
     }
 }
