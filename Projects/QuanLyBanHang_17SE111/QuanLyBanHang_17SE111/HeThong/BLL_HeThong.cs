@@ -42,5 +42,47 @@ namespace QuanLyBanHang_17SE111.HeThong
         {
             return data.GetDataTable(ref err, "PSP_TaiKhoan_LayCombo", CommandType.StoredProcedure, null);
         }
+
+        public bool XoaNhanVienByDelete(ref string err,ref int count, string maNhanVien)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_Delete", CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien));
+        }
+
+        public bool XoaNhanVienByDeleteByUpdateIsDelete(ref string err, ref int count, string maNhanVien)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_DeleteByUpdateIsDelete", CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien));
+        }
+        public bool SaoLuuDuLieu(ref string err, ref int count,string pathFile)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_SaoLuuDuLieu", CommandType.StoredProcedure,
+                new SqlParameter("@duongdan", pathFile));
+        }
+        public bool PhucHoiDuLieu(ref string err, ref int count,string sql)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, sql, CommandType.Text,
+              null);
+        }
+
+        #region Chức năng đổi mật khẩu
+        public DataTable LayDuLieuCboNhanVien(ref string err)
+        {
+            return data.GetDataTable(ref err, "PSP_NhanVien_LayDuLieuCbo", CommandType.StoredProcedure, null);
+        }
+
+        public bool ResetMatKhau(ref string err, ref int count,string maNhanVien)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_ResetMatKhau", CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien));
+        }
+
+        public bool DoiMatKhau(ref string err, ref int count, string maNhanVien,string matKhau)
+        {
+            return data.MyExcuteNonQuery(ref err, ref count, "PSP_NhanVien_DoiMatKhau", CommandType.StoredProcedure,
+                new SqlParameter("@MaNhanVien", maNhanVien),
+                 new SqlParameter("@MatKhau", matKhau));
+        }
+        #endregion
     }
 }

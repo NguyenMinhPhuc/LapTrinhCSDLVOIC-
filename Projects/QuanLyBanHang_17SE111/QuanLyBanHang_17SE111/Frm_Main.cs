@@ -38,5 +38,25 @@ namespace QuanLyBanHang_17SE111
             frm_NhanVien_Main.MdiParent = this;
             frm_NhanVien_Main.Show();
         }
+
+        private void mnuSaoLuu_Click(object sender, EventArgs e)
+        {
+            Frm_SaoLuuPhucHoi frm_SaoLuuPhucHoi = new Frm_SaoLuuPhucHoi();
+            frm_SaoLuuPhucHoi.saoLuuStatus = true;
+            frm_SaoLuuPhucHoi.ShowDialog();
+        }
+
+        private void mnuPhucHoi_Click(object sender, EventArgs e)
+        {
+            Frm_SaoLuuPhucHoi frm_SaoLuuPhucHoi = new Frm_SaoLuuPhucHoi();
+            frm_SaoLuuPhucHoi.saoLuuStatus = false;
+            frm_SaoLuuPhucHoi.ShowDialog();
+        }
+
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            Frm_DoiMatKhau frm_DoiMatKhau = new Frm_DoiMatKhau();
+            frm_DoiMatKhau.ShowDialog();
+        }
     }
 }

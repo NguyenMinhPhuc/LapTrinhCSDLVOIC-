@@ -11,3 +11,5 @@ D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_17SE11
 D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_17SE111\QuanLyBanHang_17SE111\obj\Debug\QuanLyBanHang_17SE111.csprojAssemblyReference.cache
 D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_17SE111\QuanLyBanHang_17SE111\obj\Debug\QuanLyBanHang_17SE111.HeThong.Frm_NhanVien_Main.resources
 D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_17SE111\QuanLyBanHang_17SE111\obj\Debug\QuanLyBanHang_17SE111.HeThong.Frm_NhanVien_Modifies.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_17SE111\QuanLyBanHang_17SE111\obj\Debug\QuanLyBanHang_17SE111.HeThong.Frm_SaoLuuPhucHoi.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_17SE111\QuanLyBanHang_17SE111\obj\Debug\QuanLyBanHang_17SE111.HeThong.Frm_DoiMatKhau.resources

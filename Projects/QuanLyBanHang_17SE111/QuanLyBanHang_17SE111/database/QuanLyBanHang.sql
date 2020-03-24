@@ -203,3 +203,180 @@ GO
 CREATE PROC PSP_TaiKhoan_LayCombo
 AS
 SELECT MaTaiKhoan, TenTaiKhoan FROM dbo.TaiKhoan WHERE  IsDeLete=0
+--/////////////////////-----//////////////////
+IF OBJECT_ID('LoaiSanPham')IS NOT NULL
+BEGIN
+    DROP TABLE LoaiSanPham;
+END
+GO
+CREATE TABLE LoaiSanPham
+(
+	MaLoaiSanPham INT IDENTITY(1,1) PRIMARY KEY,
+	TenLoaiSanPham NVARCHAR(30) NOT NULL,
+	MoTa NVARCHAR(200),
+	IsDelete BIT NOT NULL DEFAULT(0)
+)
+GO 
+IF OBJECT_ID('DonViTinh')IS NOT NULL
+BEGIN
+    DROP TABLE DonViTinh;
+END
+GO
+CREATE TABLE DonViTinh
+(
+	MaDonViTinh INT IDENTITY(1,1) PRIMARY KEY,
+	TenDonViTinh NVARCHAR(30) NOT NULL,
+	MoTa NVARCHAR(200),
+	IsDelete BIT NOT NULL DEFAULT(0)
+)
+GO 
+IF OBJECT_ID('NhaCungCap')IS NOT NULL
+BEGIN
+    DROP TABLE NhaCungCap;
+END
+GO
+CREATE TABLE NhaCungCap
+(
+	MaNhaCungCap INT IDENTITY(1,1) PRIMARY KEY,
+	TenNhaCungCap NVARCHAR(30) NOT NULL,
+	MoTa NVARCHAR(200),
+	IsDelete BIT NOT NULL DEFAULT(0)
+)
+GO
+INSERT INTO dbo.LoaiSanPham
+        ( TenLoaiSanPham, MoTa, IsDelete )
+VALUES  ( N'Nước giải khát', -- TenLoaiSanPham - nvarchar(30)
+          N'', -- MoTa - nvarchar(200)
+          0  -- IsDelete - bit
+          )
+          INSERT INTO dbo.LoaiSanPham
+        ( TenLoaiSanPham, MoTa, IsDelete )
+VALUES  ( N'Bánh kẹo', -- TenLoaiSanPham - nvarchar(30)
+          N'', -- MoTa - nvarchar(200)
+          0  -- IsDelete - bit
+          )
+          INSERT INTO dbo.LoaiSanPham
+        ( TenLoaiSanPham, MoTa, IsDelete )
+VALUES  ( N'Gia vị', -- TenLoaiSanPham - nvarchar(30)
+          N'', -- MoTa - nvarchar(200)
+          0  -- IsDelete - bit
+          )
+          GO
+ INSERT INTO dbo.DonViTinh
+         ( TenDonViTinh, MoTa, IsDelete )
+ VALUES  ( N'Thùng', -- TenDonViTinh - nvarchar(30)
+           N'', -- MoTa - nvarchar(200)
+           0  -- IsDelete - bit
+           )
+            INSERT INTO dbo.DonViTinh
+         ( TenDonViTinh, MoTa, IsDelete )
+ VALUES  ( N'Lon', -- TenDonViTinh - nvarchar(30)
+           N'', -- MoTa - nvarchar(200)
+           0  -- IsDelete - bit
+           )
+            INSERT INTO dbo.DonViTinh
+         ( TenDonViTinh, MoTa, IsDelete )
+ VALUES  ( N'Cái', -- TenDonViTinh - nvarchar(30)
+           N'', -- MoTa - nvarchar(200)
+           0  -- IsDelete - bit
+           )
+           GO
+           INSERT INTO dbo.NhaCungCap
+                   ( TenNhaCungCap, MoTa, IsDelete )
+           VALUES  ( N'Cocacola', -- TenNhaCungCap - nvarchar(30)
+                     N'', -- MoTa - nvarchar(200)
+                     0  -- IsDelete - bit
+                     )
+                     INSERT INTO dbo.NhaCungCap
+                   ( TenNhaCungCap, MoTa, IsDelete )
+           VALUES  ( N'Cty Gấu đỏ', -- TenNhaCungCap - nvarchar(30)
+                     N'', -- MoTa - nvarchar(200)
+                     0  -- IsDelete - bit
+                     )
+                     INSERT INTO dbo.NhaCungCap
+                   ( TenNhaCungCap, MoTa, IsDelete )
+           VALUES  ( N'Cty TNHH Beer Sài gòn', -- TenNhaCungCap - nvarchar(30)
+                     N'', -- MoTa - nvarchar(200)
+                     0  -- IsDelete - bit
+                     )
+                     
+ GO
+ GO 
+IF OBJECT_ID('SanPham')IS NOT NULL
+BEGIN
+    DROP TABLE SanPham;
+END
+GO
+CREATE TABLE SanPham(
+	MaSanPham INT IDENTITY(1,1) PRIMARY KEY,
+	TenSanPham NVARCHAR(50) NOT NULL,
+	MoTa NVARCHAR(200),
+	MaDonViTinh INT,
+	MaLoaiSanPham INT,
+	MaNhaCungCap INT,
+	SoLuongTon BIGINT,
+	DonGiaBinhQuan BIGINT,
+	IsDelete BIT NOT NULL DEFAULT(0),
+	CONSTRAINT fk_DonViTinh FOREIGN KEY(MaDonViTinh)REFERENCES dbo.DonViTinh(MaDonViTinh),
+CONSTRAINT fk_NhaCungCap FOREIGN KEY(MaNhaCungCap)REFERENCES dbo.NhaCungCap(MaNhaCungCap),
+CONSTRAINT fk_LoaiSanPham FOREIGN KEY(MaLoaiSanPham)REFERENCES dbo.LoaiSanPham(MaLoaiSanPham)		
+)
+GO
+IF OBJECT_ID('PhieuNhap')IS NOT NULL
+BEGIN
+    DROP TABLE PhieuNhap;
+END
+GO
+CREATE	TABLE PhieuNhap(
+	MaPhieuNhap CHAR(13) PRIMARY KEY,--PN20030100001
+	NgayNhap DATETIME NOT NULL DEFAULT(GETDATE()),
+	MaNhanVien INT NOT NULL,
+	CONSTRAINT fk_NhanVien FOREIGN KEY(MaNhanVien)REFERENCES dbo.NhanVien(MaNhanVien)
+)
+GO
+IF OBJECT_ID('ChiTietPhieuNhap')IS NOT NULL
+BEGIN
+    DROP TABLE ChiTietPhieuNhap;
+END
+GO
+CREATE TABLE ChiTietPhieuNhap
+(
+	MaPhieuNhap CHAR(13) NOT NULL,
+	MaSanPham INT NOT NULL,
+	SoLuongNhap BIGINT,
+	DonGiaNhap BIGINT,
+	SoLuongNhapTon BIGINT,
+	CONSTRAINT pk_ChiTietPhieuNhap PRIMARY KEY(MaPhieuNhap,MaSanPham),
+CONSTRAINT fk_PhieuNhap FOREIGN KEY(MaPhieuNhap) REFERENCES dbo.PhieuNhap (MaPhieuNhap),
+	CONSTRAINT fk_SanPham FOREIGN KEY(MaSanPham) REFERENCES dbo.SanPham (MaSanPham)
+)
+GO
+IF OBJECT_ID('HoaDon')IS NOT NULL
+BEGIN
+    DROP TABLE HoaDon;
+END
+GO
+CREATE TABLE HoaDon
+( 
+	MaHoaDon CHAR(13) NOT NULL PRIMARY KEY,
+	NgayLap DATETIME NOT NULL DEFAULT(GETDATE()),
+	MaNhanVien INT NOT NULL,
+	GiamGia BIGINT NOT NULL DEFAULT(0),
+	CONSTRAINT fk_NhanVien_HoaDon FOREIGN KEY(MaNhanVien) REFERENCES dbo.NhanVien(MaNhanVien)
+)
+GO
+IF OBJECT_ID('ChiTietHoaDon')IS NOT NULL
+BEGIN
+    DROP TABLE ChiTietHoaDon;
+END
+GO
+CREATE TABLE ChiTietHoaDon(
+	MaHoaDon CHAR(13) NOT NULL,
+	MaSanPham INT NOT null,
+	SoLuongBan BIGINT NOT NULL DEFAULT(0),
+	DonGiaBan BIGINT NOT NULL DEFAULT(0),
+	GiamGia BIGINT NOT NULL DEFAULT(0),
+	CONSTRAINT pk_ChiTietHoaDon PRIMARY KEY(MaHoaDon,MaSanPham),
+	CONSTRAINT fk_HoaDonChiTietHoaDOn FOREIGN KEY(MaHoaDon) REFERENCES dbo.HoaDon(MaHoaDon),
+CONSTRAINT fk_SanPhamChiTietHoaDOn FOREIGN KEY(MaSanPham) REFERENCES dbo.SanPham(MaSanPham)	
+)

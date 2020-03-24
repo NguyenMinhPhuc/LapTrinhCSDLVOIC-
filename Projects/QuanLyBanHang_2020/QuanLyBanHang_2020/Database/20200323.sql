@@ -49,10 +49,10 @@ END
 GO
 CREATE PROC PSP_NhanVien_DoiMatKhau
 @MaNhanVien INT,
-@MatKhau VARBINARY(30)
+@MatKhau VARCHAR(30)
 AS
 UPDATE dbo.NhanVien
-SET MatKhau=pwdEncrypt('@MatKhau')
+SET MatKhau=pwdEncrypt(@MatKhau)
 WHERE MaNV=@MaNhanVien
 GO
 IF OBJECT_ID('dbo.PSP_NhanVien_ResetMatKhau')IS NOT NULL

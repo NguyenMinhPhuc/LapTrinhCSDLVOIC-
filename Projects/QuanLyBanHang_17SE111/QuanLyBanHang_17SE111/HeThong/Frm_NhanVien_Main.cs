@@ -19,6 +19,7 @@ namespace QuanLyBanHang_17SE111.HeThong
         }
         BLL_HeThong bd;
         string err = string.Empty;
+        int count = 0;
         DataTable dataTable;
         NhanVien nhanVien;
         private void Frm_NhanVien_Main_Load(object sender, EventArgs e)
@@ -69,6 +70,29 @@ namespace QuanLyBanHang_17SE111.HeThong
         private void btnXoa_Click(object sender, EventArgs e)
         {
 
+            if (nhanVien != null)
+            {
+                if (MessageBox.Show(string.Format("Chương trình sẽ thực hiện thao tác xóa nhân viên {0} khỏi hệ thống\n Việc này sẽ làm cho dữ liệu của nhân viên {1} bị thay đổi và không thể phục hồi\n Bạn có chắc chắn muốn xóa dữ liệu này không?\n Nếu đồng ý chọn OK. Ngược lại chọn Cancel",nhanVien.TenNhanVien,nhanVien.TenNhanVien), "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    count = 0;
+                    if (bd.XoaNhanVienByDeleteByUpdateIsDelete(ref err, ref count, nhanVien.MaNhanVien))
+                    {
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Xóa thành công");
+                            HienThiDanhSachNhanVien();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa không thành công\n" + err);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công\n" + err);
+                    }
+                }
+            }
         }
     }
 }
