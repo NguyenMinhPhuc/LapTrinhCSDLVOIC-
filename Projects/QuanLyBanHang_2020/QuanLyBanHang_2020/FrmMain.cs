@@ -1,4 +1,5 @@
 ﻿using QuanLyBanHang_2020.HeThong;
+using QuanLyBanHang_2020.QuanLyNhapHang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +59,12 @@ namespace QuanLyBanHang_2020
         {
             Frm_DoiMatKhai frmDoiMatKhau = new Frm_DoiMatKhai();
             frmDoiMatKhau.ShowDialog();
+        }
+
+        private void btnChiTietNhapHang_Click(object sender, EventArgs e)
+        {
+            Frm_ChiTietNhapHang_Main frmNhapHang = new Frm_ChiTietNhapHang_Main();
+            frmNhapHang.ShowDialog();
         }
     }
 }

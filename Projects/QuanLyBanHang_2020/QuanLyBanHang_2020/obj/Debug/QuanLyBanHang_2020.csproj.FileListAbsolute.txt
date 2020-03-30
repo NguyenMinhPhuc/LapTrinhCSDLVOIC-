@@ -24,3 +24,5 @@ D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\Q
 D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.csproj.GenerateResource.Cache
 D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.HeThong.Frm_SaoLuu_PhucHoi.resources
 D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.HeThong.Frm_DoiMatKhai.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.QuanLyNhapHang.Frm_ChiTietNhapHang_Main.resources
+D:\Learning\ProjectToGitHub\WFA2\LapTrinhCSDLVOIC-\Projects\QuanLyBanHang_2020\QuanLyBanHang_2020\obj\Debug\QuanLyBanHang_2020.QuanLyNhapHang.Frm_ChiTietNhapHang_Modifies.resources

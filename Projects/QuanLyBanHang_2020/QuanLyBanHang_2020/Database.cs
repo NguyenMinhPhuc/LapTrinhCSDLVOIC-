@@ -106,5 +106,40 @@ namespace QuanLyBanHang_2020
                 cnn.Close();
             }
         }
+
+        public object MyExecuteScalar(ref string err,  string Sql, CommandType ct, params SqlParameter[] param)
+        {
+
+            try
+            {
+                if (cnn.State == ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
+                cnn.Open();
+                cmd = new SqlCommand(Sql, cnn);
+                cmd.CommandType = ct;
+                cmd.CommandTimeout = 6000;
+                if (param != null)
+                {
+
+                    foreach (SqlParameter item in param)
+                    {
+                        cmd.Parameters.Add(item);
+                    }
+                }
+              return  cmd.ExecuteScalar();
+                 
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return null;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+        }
     }
 }

@@ -93,6 +93,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyNhapHang\BLL_NhapHang.cs" />
+    <Compile Include="QuanLyNhapHang\Frm_ChiTietNhapHang_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhapHang\Frm_ChiTietNhapHang_Main.Designer.cs">
+      <DependentUpon>Frm_ChiTietNhapHang_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhapHang\Frm_ChiTietNhapHang_Modifies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhapHang\Frm_ChiTietNhapHang_Modifies.Designer.cs">
+      <DependentUpon>Frm_ChiTietNhapHang_Modifies.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +133,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyNhapHang\Frm_ChiTietNhapHang_Main.resx">
+      <DependentUpon>Frm_ChiTietNhapHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhapHang\Frm_ChiTietNhapHang_Modifies.resx">
+      <DependentUpon>Frm_ChiTietNhapHang_Modifies.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
