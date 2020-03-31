@@ -1,4 +1,5 @@
 ﻿using QuanLyBanHang_17SE111.HeThong;
+using QuanLyBanHang_17SE111.QuanLyNhapHang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,12 @@ namespace QuanLyBanHang_17SE111
         {
             Frm_DoiMatKhau frm_DoiMatKhau = new Frm_DoiMatKhau();
             frm_DoiMatKhau.ShowDialog();
+        }
+
+        private void mnuChiTietNhap_Click(object sender, EventArgs e)
+        {
+            Frm_NhapHang_Main frmNhapHang = new Frm_NhapHang_Main();
+            frmNhapHang.ShowDialog();
         }
     }
 }

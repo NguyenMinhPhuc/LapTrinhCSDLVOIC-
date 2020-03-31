@@ -87,5 +87,36 @@ namespace QuanLyBanHang_17SE111
             }
             return false;
         }
+        public object MyExecuteScalar(ref string err,  string sql, CommandType ct, params SqlParameter[] parameters)
+        {
+            try
+            {
+                if (cnn.State == ConnectionState.Open)
+                    cnn.Close();
+                cnn.Open();
+
+                cmd = new SqlCommand(sql, cnn);
+                cmd.CommandType = ct;
+                cmd.CommandTimeout = 6000;
+                if (parameters != null)
+                {
+                    foreach (SqlParameter item in parameters)
+                    {
+                        cmd.Parameters.Add(item);
+                    }
+                }
+                return cmd.ExecuteScalar();
+               
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+            return null;
+        }
     }
 }

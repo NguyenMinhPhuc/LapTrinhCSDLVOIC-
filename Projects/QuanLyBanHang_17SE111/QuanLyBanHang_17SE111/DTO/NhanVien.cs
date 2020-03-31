@@ -9,16 +9,57 @@ namespace QuanLyBanHang_17SE111.DTO
     public class NhanVien
     {
         string maNhanVien, tenNhanVien, dienThoai, maTaiKhoan, tenDangNhap, matKhau;
+
+        public string MatKhau
+        {
+            get { return matKhau; }
+            set { matKhau = value; }
+        }
+
+        public string TenDangNhap
+        {
+            get { return tenDangNhap; }
+            set { tenDangNhap = value; }
+        }
+
+        public string MaTaiKhoan
+        {
+            get { return maTaiKhoan; }
+            set { maTaiKhoan = value; }
+        }
+
+        public string DienThoai
+        {
+            get { return dienThoai; }
+            set { dienThoai = value; }
+        }
+
+        public string TenNhanVien
+        {
+            get { return tenNhanVien; }
+            set { tenNhanVien = value; }
+        }
+
+        public string MaNhanVien
+        {
+            get { return maNhanVien; }
+            set { maNhanVien = value; }
+        }
         DateTime ngaySinh;
+
+        public DateTime NgaySinh
+        {
+            get { return ngaySinh; }
+            set { ngaySinh = value; }
+        }
         bool isDelete;
 
-        public string MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
-        public string TenNhanVien { get => tenNhanVien; set => tenNhanVien = value; }
-        public string DienThoai { get => dienThoai; set => dienThoai = value; }
-        public string MaTaiKhoan { get => maTaiKhoan; set => maTaiKhoan = value; }
-        public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
-        public string MatKhau { get => matKhau; set => matKhau = value; }
-        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
-        public bool IsDelete { get => isDelete; set => isDelete = value; }
+        public bool IsDelete
+        {
+            get { return isDelete; }
+            set { isDelete = value; }
+        }
+
+        
     }
 }
